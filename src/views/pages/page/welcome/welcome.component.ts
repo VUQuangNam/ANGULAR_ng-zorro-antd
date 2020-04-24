@@ -6,5 +6,14 @@ import { Component, ViewEncapsulation } from '@angular/core';
     encapsulation: ViewEncapsulation.None,
 })
 export class WelcomeComponent {
+    isLoadingOne = false;
+    isLoadingTwo = false;
     constructor() { }
+
+    loadOne = () => {
+        this.isLoadingOne = true;
+        setTimeout(() => {
+            this.isLoadingOne = false;
+        }, 5000);
+    }
 }

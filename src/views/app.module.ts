@@ -5,18 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NZ_I18N } from 'ng-zorro-antd/i18n';
-import { vi_VN } from 'ng-zorro-antd/i18n';
+import {
+    NZ_I18N,
+    vi_VN,
+    NzMenuModule,
+    NzButtonModule,
+    NzCarouselModule
+} from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import vi from '@angular/common/locales/vi';
 
 import { DefaultLayoutComponent } from './pages/layouts/default/default-layout.component';
 import { DefaultSidebarComponent } from './pages/layouts/component/sidebar/sidebar.component';
 import { DefaultHeaderComponent } from './pages/layouts/component/header/header.component';
+import { WelcomeComponent } from './pages/page/welcome/welcome.component';
+import { WorkplaceComponent } from './pages/page/workplace/workplace.component';
 
 registerLocaleData(vi);
 
@@ -26,7 +32,9 @@ registerLocaleData(vi);
         DefaultLayoutComponent,
         DefaultSidebarComponent,
         DefaultHeaderComponent,
-        DefaultHeaderComponent
+        DefaultHeaderComponent,
+        WelcomeComponent,
+        WorkplaceComponent
     ],
     imports: [
         BrowserModule,
@@ -36,7 +44,9 @@ registerLocaleData(vi);
         NzMenuModule,
         FormsModule,
         HttpClientModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        NzButtonModule,
+        NzCarouselModule
     ],
     providers: [{ provide: NZ_I18N, useValue: vi_VN }],
     bootstrap: [AppComponent]

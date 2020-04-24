@@ -18,10 +18,47 @@
             </li>
         </ul>
     </li>
-    <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
+    <li nz-submenu nzTitle="Form" nzIcon="form">
+        <ul>
+            <li nzMatchRouter nz-submenu nzTitle="Basic Form 1">
+                <ul>
+                    <li nz-menu-item nzMatchRouter>1</li>
+                    <li nz-menu-item nzMatchRouter>2</li>
+                    <li nz-menu-item nzMatchRouter>3</li>
+                    <li nz-menu-item nzMatchRouter>4</li>
+                </ul>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+                <a>Basic Form 2</a>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+                <a>Basic Form 3</a>
+            </li>
+        </ul>
+    </li>
+    <li nz-submenu nzTitle="User" nzIcon="user">
         <ul>
             <li nz-menu-item nzMatchRouter>
-                <a>Basic Form</a>
+                <a routerLink="#">Welcome</a>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+                <a>Monitor</a>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+                <a routerLink="#">Workplace</a>
+            </li>
+        </ul>
+    </li>
+    <li nz-submenu nzTitle="Deployment Unit" nzIcon="deployment-unit">
+        <ul>
+            <li nz-menu-item nzMatchRouter>
+                <a routerLink="#">Welcome</a>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+                <a>Monitor</a>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+                <a routerLink="#">Workplace</a>
             </li>
         </ul>
     </li>
