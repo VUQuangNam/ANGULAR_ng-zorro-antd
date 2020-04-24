@@ -14,23 +14,31 @@ import { vi_VN } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import vi from '@angular/common/locales/vi';
 
+import { DefaultLayoutComponent } from './pages/layouts/default/default-layout.component';
+import { DefaultSidebarComponent } from './pages/layouts/component/sidebar/sidebar.component';
+import { DefaultHeaderComponent } from './pages/layouts/component/header/header.component';
+
 registerLocaleData(vi);
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    IconsProviderModule,
-    NzLayoutModule,
-    NzMenuModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule
-  ],
-  providers: [{ provide: NZ_I18N, useValue: vi_VN }],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        DefaultLayoutComponent,
+        DefaultSidebarComponent,
+        DefaultHeaderComponent,
+        DefaultHeaderComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        IconsProviderModule,
+        NzLayoutModule,
+        NzMenuModule,
+        FormsModule,
+        HttpClientModule,
+        BrowserAnimationsModule
+    ],
+    providers: [{ provide: NZ_I18N, useValue: vi_VN }],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
