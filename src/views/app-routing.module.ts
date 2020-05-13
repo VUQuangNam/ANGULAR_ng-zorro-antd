@@ -3,28 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import { DefaultLayoutComponent } from './pages/layouts/default/default-layout.component';
-import { WelcomeComponent } from './pages/page/welcome/welcome.component';
 import { WorkplaceComponent } from './pages/page/workplace/workplace.component';
-
-export const currencyConfig = {
-    allowNegative: true,
-    allowZero: true,
-    nullable: true,
-    align: 'right',
-    thousands: ',',
-    decimal: '.',
-    precision: 0,
-    prefix: '',
-    suffix: ''
-};
+import { ButtonComponent } from './pages/page/button/button.component';
 
 const routes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: '/welcome' },
+    { path: '', pathMatch: 'full', redirectTo: '/button' },
     {
         path: '',
         component: DefaultLayoutComponent,
         children: [
-            { path: 'welcome', component: WelcomeComponent },
+            { path: 'button', component: ButtonComponent },
             { path: 'workplace', component: WorkplaceComponent }
         ]
     },

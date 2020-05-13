@@ -13,7 +13,10 @@ import {
     vi_VN,
     NzMenuModule,
     NzButtonModule,
-    NzCarouselModule
+    NzCarouselModule,
+    NzTableModule,
+    NzDividerModule,
+    NzSwitchModule
 } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import vi from '@angular/common/locales/vi';
@@ -21,7 +24,7 @@ import vi from '@angular/common/locales/vi';
 import { DefaultLayoutComponent } from './pages/layouts/default/default-layout.component';
 import { DefaultSidebarComponent } from './pages/layouts/component/sidebar/sidebar.component';
 import { DefaultHeaderComponent } from './pages/layouts/component/header/header.component';
-import { WelcomeComponent } from './pages/page/welcome/welcome.component';
+import { ButtonComponent } from './pages/page/button/button.component';
 import { WorkplaceComponent } from './pages/page/workplace/workplace.component';
 
 registerLocaleData(vi);
@@ -33,7 +36,7 @@ registerLocaleData(vi);
         DefaultSidebarComponent,
         DefaultHeaderComponent,
         DefaultHeaderComponent,
-        WelcomeComponent,
+        ButtonComponent,
         WorkplaceComponent
     ],
     imports: [
@@ -46,7 +49,10 @@ registerLocaleData(vi);
         HttpClientModule,
         BrowserAnimationsModule,
         NzButtonModule,
-        NzCarouselModule
+        NzCarouselModule,
+        NzTableModule,
+        NzDividerModule,
+        NzSwitchModule
     ],
     providers: [{ provide: NZ_I18N, useValue: vi_VN }],
     bootstrap: [AppComponent]

@@ -2,14 +2,15 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: 'app-welcome',
-    templateUrl: './welcome.component.html',
+    templateUrl: './button.component.html',
     encapsulation: ViewEncapsulation.None,
 })
-export class WelcomeComponent {
+export class ButtonComponent {
     isLoadingOne = false;
     isLoadingTwo = false;
+    mode = false;
+    dark = false;
     constructor() { }
-
     loadOne = () => {
         this.isLoadingOne = true;
         setTimeout(() => {
